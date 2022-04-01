@@ -1,6 +1,6 @@
 # Club Manager Chat
 
-<p align="center"><img src="images/screencapture-localhost-3000-2022-03-30-21_25_14.png"  height="auto" width="100%">
+<p align="center"><img src="public/images/screencapture-club-manager-chat-herokuapp-2022-04-01-16_13_42.jpg"  height="auto" width="100%">
 </p>
 
 # Table of Contents
@@ -54,34 +54,34 @@ To view the live application visit the following URL:
 ├── server.js -> Server-side code in Node.js with an Express Back-end
 ```
 
-## Package used
+## NPM Packages used within Club Manager
 
-├── @babel/core@7.17.7
-├── @babel/preset-env@7.16.11
-├── @sendgrid/mail@7.6.2
-├── axios@0.24.0
-├── babel-loader@8.2.3
-├── bcryptjs@2.4.3
-├── connect-flash@0.1.1
-├── connect-mongo@4.6.0
-├── cors@2.8.5
-├── csurf@1.11.0
-├── dompurify@2.3.6
-├── dotenv@10.0.0
-├── ejs@3.1.6
-├── env@0.0.2
-├── express-session@1.17.2
-├── express@4.17.3
-├── jsonwebtoken@8.5.1
-├── marked@4.0.12
-├── md5@2.3.0
-├── mongodb@4.4.1
-├── nodemon@2.0.15
-├── sanitize-html@2.7.0
-├── socket.io@4.4.1
-├── validator@13.7.0
-├── webpack-cli@4.9.2
-└── webpack@5.70.0
+- [x] @babel/core@7.17.7
+- [x] @babel/preset-env@7.16.11
+- [x] @sendgrid/mail@7.6.2
+- [x] axios@0.24.0
+- [x] babel-loader@8.2.3
+- [x] bcryptjs@2.4.3
+- [x] connect-flash@0.1.1
+- [x] connect-mongo@4.6.0
+- [x] cors@2.8.5
+- [x] csurf@1.11.0
+- [x] dompurify@2.3.6
+- [x] dotenv@10.0.0
+- [x] ejs@3.1.6
+- [x] env@0.0.2
+- [x] express-session@1.17.2
+- [x] express@4.17.3
+- [x] jsonwebtoken@8.5.1
+- [x] marked@4.0.12
+- [x] md5@2.3.0
+- [x] mongodb@4.4.1
+- [x] nodemon@2.0.15
+- [x] sanitize-html@2.7.0
+- [x] socket.io@4.4.1
+- [x] validator@13.7.0
+- [x] webpack-cli@4.9.2
+- [x] webpack@5.70.0
 
 # Instructions for running the application locally in development
 
