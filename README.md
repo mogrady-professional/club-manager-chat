@@ -143,13 +143,14 @@ To view the live application visit the following URL:
 - [x] webpack-cli@4.9.2
 - [x] webpack@5.70.0
 
-# Instructions for running the application locally in development
+# Instructions for running locally in development
 
 To run the application for the first time on a windows PC, clone or download the repo and run the following commands:
 
 - `npm install`
 - `npm run watch`
 
+Thereafter:
 `npm run watch` starts two command prompt windows;
 
 - webpack (Webpack is an open-source JavaScript module bundler.)

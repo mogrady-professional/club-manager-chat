@@ -43,9 +43,10 @@
                     <%= post.author.username %>
                 </a>
                 on
-                <%=post.createdDate.getDate()%>/
-                    <%=post.createdDate.getMonth()+1%>/
-                        <%=post.createdDate.getFullYear()%>
+                <%= post.createdDate.getDate()%>/
+                    <%= post.createdDate.getMonth() + 1
+    %>/
+                        <%= post.createdDate.getFullYear() %>
             </p>
 
             <div class="body-content">
