@@ -1,0 +1,61 @@
+<%- include('includes/header') %>
+
+    <div class="container py-md-5 container--narrow">
+        <%- include('includes/flash') %>
+            <% if(posts.length){ %>
+                <div class="list-group">
+                    <h2 class="text-center mb-4">The Latest From Those You Follow</h2>
+                    <% posts.forEach(function(post) { %>
+                        <a href="/post/<%= post._id %>" class="list-group-item list-group-item-action">
+      <img class="avatar-tiny" src="<%= post.author.avatar %>" />
+      <strong><%= post.title %></strong>
+      <span class="text-muted small">
+        by <%= post.author.username %> <%= post.createdDate.getMonth() + 1
+        %>/<%= post.createdDate.getDate() %>/<%= post.createdDate.getFullYear()
+        %></span
+      >
+    </a>
+                        <% }) %>
+                </div>
+                <% }else{ %>
+                    <div class="text-center">
+                        <!-- Empty Feed -->
+                        <h2>Hello <strong><%= user.username %></strong>, your feed is empty.</h2>
+                        <p class="lead text-muted">
+                            Your feed displays the latest posts from the people you follow. If you don&rsquo;t have any friends to follow that&rsquo;s okay; you can use the &ldquo;Search&rdquo; feature in the top menu bar to find content written by people with similar interests
+                            and then follow them.
+                        </p>
+                    </div>
+                    <section class="py-5">
+                        <div class="container px-5">
+                            <h1 class="fw-bolder fs-5 mb-4">Club Manager</h1>
+                            <div class="card border-0 shadow rounded-3 overflow-hidden">
+                                <div class="card-body p-0">
+                                    <div class="row gx-0">
+                                        <div class="col-lg-6 col-xl-5 py-lg-5">
+                                            <div class="p-4 p-md-5">
+                                                <div class="badge bg-primary bg-gradient rounded-pill mb-2">
+                                                    News Archive
+                                                </div>
+                                                <div class="h2 fw-bolder">GAA News</div>
+                                                <p>
+                                                    For all the latest news and updates from the GAA visit our news archive.
+                                                </p>
+                                                <a class="stretched-link text-decoration-none" href="https://www.gaa.ie/news-archive/">
+                  Read more
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-xl-7">
+                                            <div class="bg-featured-blog"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <% } %>
+    </div>
+
+    <%- include('includes/footer') %>

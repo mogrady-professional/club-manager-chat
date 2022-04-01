@@ -1,0 +1,234 @@
+<%- include('includes/header') %>
+
+    <%- include('includes/flash') %>
+        <!--  -->
+
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-5">
+                <div class="row gx-5 align-items-center justify-content-center">
+                    <div class="col-lg-7 py-3 py-md-5">
+                        <div class="my-5 text-center text-xl-start">
+                            <h1 class="display-5 fw-bolder text-white mb-2 text-center">
+                                The Home of Great Club Management
+                            </h1>
+                            <p class="lead fw-normal text-white-50 mb-4">
+                                Stay in touch with the latest news and updates from your club.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 pl-lg-5 pb-3 py-lg-5">
+                        <form action="/register" method="POST" id="registration-form">
+                            <% regErrors.forEach(function(message) { %>
+                                <div class="alert alert-danger small">
+                                    <%= message %>
+                                </div>
+                                <% }) %>
+
+                                    <div class="form-group">
+                                        <label for="username-register" class="text-muted mb-1"><small>Username</small></label
+        >
+        <input
+          name="username"
+          id="username-register"
+          class="form-control"
+          type="text"
+          placeholder="Pick a username"
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email-register" class="text-muted mb-1"
+          ><small>Email</small></label
+        >
+        <input
+          name="email"
+          id="email-register"
+          class="form-control"
+          type="text"
+          placeholder="you@example.com"
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password-register" class="text-muted mb-1"
+          ><small>Password</small></label
+        >
+        <input
+          name="password"
+          id="password-register"
+          class="form-control"
+          type="password"
+          placeholder="Create a password"
+        />
+      </div>
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+      <hr>
+              <button
+                type="submit"
+                class="py-3 mt-4 btn btn-lg btn-primary btn-block"
+              >
+                Sign up for Club Manager
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Main section one-->
+    <section class="py-5 bg-light" id="scroll-target">
+      <div class="container px-5 my-5">
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-6">
+            <img
+              class="img-fluid rounded mb-5 mb-lg-0"
+              src="images/desktop-chat.jpg"
+              alt="..."
+            />
+          </div>
+          <div class="col-lg-6">
+            <h2 class="fw-bolder">Live Socket Chat</h2>
+            <p class="lead fw-normal text-muted mb-0">
+              Chat with your club members and coaches in real time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Main section two-->
+    <section class="py-5">
+      <div class="container px-5 my-5">
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-6 order-first order-lg-last">
+            <img
+              class="img-fluid rounded mb-5 mb-lg-0"
+              src="images/screencapture-localhost-3003-profile-lukeconnolly-2022-04-01-15_25_54.jpg"
+              alt="..."
+            />
+          </div>
+          <div class="col-lg-6">
+            <h2 class="fw-bolder">Blog Posts</h2>
+            <p class="lead fw-normal text-muted mb-0">
+              View the latest blog posts from those you follow with your very
+              own profile feed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Main section three-->
+    <section class="py-5 bg-light" id="scroll-target">
+      <div class="container px-5 my-5">
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-6">
+            <img
+              class="img-fluid rounded mb-5 mb-lg-0"
+              src="images/screencapture-localhost-3003-2022-04-01-11_19_56.jpg"
+              alt="..."
+            />
+          </div>
+          <div class="col-lg-6">
+            <h2 class="fw-bolder">Customise your Profile</h2>
+            <p class="lead fw-normal text-muted mb-0">
+              Set up your own gravitar and customise your profile.
+              One avatar for
+everything, everywhere.
+Gravatar powers your public profile, visible wherever you post, comment, and interact online.
+            </p>
+            <img
+              class="img-fluid rounded mb-5 mb-lg-0" style="margin: auto; width: 100%;"
+              src="images/gravatar-1024x373.webp"              alt="..."
+            />
+            <a href="https://en.gravatar.com/" class="py-3 mt-4 btn btn-lg btn-primary btn-block" target="_blank">
+              Create your Own Gravatar
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Main section four-->
+    <section class="py-5">
+      <div class="container px-5 my-5">
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-6 order-first order-lg-last">
+            <img
+              class="img-fluid rounded mb-5 mb-lg-0"
+              src="images/screencapture-localhost-3003-post-6246eb62ee58bb7e8742f82e-2022-04-01-15_07_26.jpg"
+              alt="..."
+            />
+          </div>
+          <div class="col-lg-6">
+            <h2 class="fw-bolder">Search for Posts</h2>
+            <p class="lead fw-normal text-muted mb-0">
+              Find the latest blog posts from your club members and coaches.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Main section five-->
+    <section class="py-5 bg-light" id="scroll-target">
+      <div class="container px-5 my-5">
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-6">
+            <img
+              class="img-fluid rounded mb-5 mb-lg-0"
+              src="images/screencapture-localhost-3003-post-6246eb62ee58bb7e8742f82e-2022-04-01-15_04_46.jpg"
+              alt="..."
+            />
+          </div>
+          <div class="col-lg-6">
+            <h2 class="fw-bolder">Read your Favourite Posts</h2>
+            <p class="lead fw-normal text-muted mb-0">
+              Find your followers posts and read them at your leisure.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+        <!-- Main section six-->
+        <section class="py-5">
+          <div class="container px-5 my-5">
+            <div class="row gx-5 align-items-center">
+              <div class="col-lg-6 order-first order-lg-last">
+                <img
+                  class="img-fluid rounded mb-5 mb-lg-0"
+                  src="images/mobile-chat.jpg"
+                  alt="..."
+                />
+              </div>
+              <div class="col-lg-6">
+                <h2 class="fw-bolder">Responsive Mobile Display</h2>
+                <p class="lead fw-normal text-muted mb-0">
+                  Responsive design across the application.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+            <!-- Main section seven-->
+    <section class="py-5 bg-light" id="scroll-target">
+      <div class="container px-5 my-5">
+        <div class="row gx-5 align-items-center">
+          <div class="col-lg-6">
+            <img
+              class="img-fluid rounded mb-5 mb-lg-0"
+              src="images/create-post.jpg"
+              alt="..."
+            />
+          </div>
+          <div class="col-lg-6">
+            <h2 class="fw-bolder">Create your own Content</h2>
+            <p class="lead fw-normal text-muted mb-0">
+              Post the information you want to share with your followers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<!--  -->
+<%- include('includes/footer') %>
