@@ -28,7 +28,8 @@ Club Manager is a Full-Stack JavaScript application developed in MVC Pattern on 
   - Password must be at least 12 characters.
 - User input sanititazation on both client and server side inputs
 - API Routing Developed for future Mobile App Integration
-- Email Notification delivered to project owner for new post alert
+- Email Notification delivered to project owner for new post alert (
+  SendGrid: Email Delivery, API, Marketing Service))
 - Invalid username / password detection
 
 Project uses the [EJS templating engine](https://ejs.co/) to render views, with data stored on a Cluster the [MongoDB Cloud](https://cloud.mongodb.com/) accessable through the Atlas interface. Simple frontend UI based on a modern off-the-shelf Bootstrap Template.
