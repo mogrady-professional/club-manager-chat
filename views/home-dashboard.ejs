@@ -4,6 +4,8 @@
         <%- include('includes/flash') %>
             <% if(posts.length){ %>
                 <div class="list-group">
+                    <h1 class="text-center mb-1">Home Dashboard</h1>
+                    <hr />
                     <h2 class="text-center mb-4">The Latest From Those You Follow</h2>
                     <% posts.forEach(function(post) { %>
                         <a href="/post/<%= post._id %>" class="list-group-item list-group-item-action">

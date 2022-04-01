@@ -21,8 +21,15 @@ Club Manager is a Full-Stack JavaScript application developed in MVC Pattern on 
 - Follow other members functionality
 - Custom user profile Avatar using [Gravatar](https://en.gravatar.com/)
 - Search for Posts functionality
-- Real-time serverside and clientside form validation and user input sanititazation.
+- Real-time serverside and clientside form validation
+  - That username is already taken.
+  - Username must be at least 3 characters.
+  - You must provide a valid email address.
+  - Password must be at least 12 characters.
+- User input sanititazation on both client and server side inputs
 - API Routing Developed for future Mobile App Integration
+- Email Notification delivered to project owner for new post alert
+- Invalid username / password detection
 
 Project uses the [EJS templating engine](https://ejs.co/) to render views, with data stored on a Cluster the [MongoDB Cloud](https://cloud.mongodb.com/) accessable through the Atlas interface. Simple frontend UI based on a modern off-the-shelf Bootstrap Template.
 
