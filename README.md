@@ -9,26 +9,28 @@
 <img src="public/images/screencapture-localhost-3003-post-6246eb62ee58bb7e8742f82e-2022-04-01-15_04_46.jpg"  height="auto" width="100%">
 <img src="public/images/screencapture-localhost-3003-post-6246eb62ee58bb7e8742f82e-2022-04-01-15_07_26.jpg"  height="auto" width="100%">
 </p>
+
 # Table of Contents
 
 # Introduction
 
-Club Manager is a Full-Stack JavaScript application developed with a Node backend on a Express server in a MVC Pattern with Modular Class-Based JavaScript code. Club Manager represents a GAA Club Team Chat Application which enables users:
+Club Manager is a Full-Stack JavaScript application developed in MVC Pattern on a Node backend using Express Server with Modular Class-Based JavaScript code. Club Manager represents a GAA Club Team Chat Application between players and managers which enables functionality such as:
 
 - Live Socket Chat with Online Registered Members
-- Post Club Information in a Blog Format
-- Follow other Members
+- Posting of Club Information through a user profile based system in blog post format
+- Follow other members functionality
 - Custom user profile Avatar using [Gravatar](https://en.gravatar.com/)
 - Search for Posts functionality
 - Real-time serverside and clientside form validation and user input sanititazation.
 - API Routing Developed for future Mobile App Integration
 
-Project uses the [EJS templating engine](https://ejs.co/) to render views, with data stored on a Cluster the [MongoDB Cloud](https://cloud.mongodb.com/) accessable through the Atlas interface. Simple frontend UI based on a BootStrap Template.
+Project uses the [EJS templating engine](https://ejs.co/) to render views, with data stored on a Cluster the [MongoDB Cloud](https://cloud.mongodb.com/) accessable through the Atlas interface. Simple frontend UI based on a modern off-the-shelf Bootstrap Template.
 
-# Functionality - from a Developer Prospective
+# Features — from a Developer Prospective
 
 - Automatic App Restarts with Nodemon
-- Follow and Post Functionality by user ID
+- Modular Javascript code compiled with babel and webpack for JS Bundling
+- Follow and Post Functionality based on user ID
 - Protected Routes (UserController.mustBeLoggedIn)
 - Flash messages for serverside form validation
 - Object Validation with Prototype TypeOf
@@ -37,20 +39,19 @@ Project uses the [EJS templating engine](https://ejs.co/) to render views, with 
 - Gravitar used for Avatars
 - Array Destructuring used for Post,Followers,Following Counts
 - Chat Functionality for logged in users
-- Socket connection between browser and server
+- Socket connection functionality between browser and server with socket.io@4.4.1
 - Security addded to chat functionality with sanitizeHTML on the server and DOMPurify on the client side
 - Real time Registration Form Validation to enhance user experience, real Validation is done on the server side.
-- Checking if the username already exists within the MongoDB database prior to user registering -> using axios in the Registration to send async request to server; trip to the server
-- Form submission prevented unless all elements are validated
+- Checking if the username already exists within the MongoDB database prior to user registering -> using axios in the Registration to send async request to server
+- Form submission prevented unless all elements are validated (preventing unnecessary round trips to server)
 - onBlur event listened to within form submission -> ensure if user skips field errors still show
 - CSRF attack protection
-- API Built including -> Seperate Router for API Requests
-- JSON Webtokens
-- MVC Pattern
+- API developed with seperate Router for API Requests
+- JSON Webtokens using csurf protection middleware.
+- MVC Pattern project schema
 - Publicly available request
 - CORS attack protection
 - Send email functionality through SendGrid API
-- Project developed in JavaScript Modules and bundled using babel & webpack
 - Project hosted on Heroku
 - .env secret credentials used
 
