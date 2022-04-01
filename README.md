@@ -1,27 +1,43 @@
-# Club Manager Chat
+<h1 align="center">Club Manager</h1>
 
-<p align="center"><img src="public/images/screencapture-club-manager-chat-herokuapp-2022-04-01-16_13_42.jpg"  height="auto" width="100%">
+# Project Screenshots
+
+<p align="center">
+<img src="public/images/screencapture-localhost-3003-2022-04-01-11_19_56.jpg"  height="auto" width="100%">
+<img src="public/images/desktop-chat.jpg"  height="auto" width="100%">
+<img src="public/images/screencapture-localhost-3003-2022-04-01-14_57_28.jpg"  height="auto" width="100%">
+<img src="public/images/screencapture-localhost-3003-post-6246eb62ee58bb7e8742f82e-2022-04-01-15_04_46.jpg"  height="auto" width="100%">
+<img src="public/images/screencapture-localhost-3003-post-6246eb62ee58bb7e8742f82e-2022-04-01-15_07_26.jpg"  height="auto" width="100%">
 </p>
-
 # Table of Contents
 
 # Introduction
 
-Full-Stack JavaScript application representing a GAA Club Team Chat App developed in a MVC Pattern. Project uses the EJS templating engine to display views.
+Club Manager is a Full-Stack JavaScript application developed with a Node backend on a Express server in a MVC Pattern with Modular Class-Based JavaScript code. Club Manager represents a GAA Club Team Chat Application which enables users:
 
-# Functionality
+- Live Socket Chat with Online Registered Members
+- Post Club Information in a Blog Format
+- Follow other Members
+- Custom user profile Avatar using [Gravatar](https://en.gravatar.com/)
+- Search for Posts functionality
+- Real-time serverside and clientside form validation and user input sanititazation.
+- API Routing Developed for future Mobile App Integration
+
+Project uses the [EJS templating engine](https://ejs.co/) to render views, with data stored on a Cluster the [MongoDB Cloud](https://cloud.mongodb.com/) accessable through the Atlas interface. Simple frontend UI based on a BootStrap Template.
+
+# Functionality - from a Developer Prospective
 
 - Automatic App Restarts with Nodemon
 - Follow and Post Functionality by user ID
 - Protected Routes (UserController.mustBeLoggedIn)
-- Flash messages
+- Flash messages for serverside form validation
 - Object Validation with Prototype TypeOf
 - Await/Async for database interaction
 - Try catch block added to Await/Async
 - Gravitar used for Avatars
 - Array Destructuring used for Post,Followers,Following Counts
 - Chat Functionality for logged in users
-- socket connection between browser and server
+- Socket connection between browser and server
 - Security addded to chat functionality with sanitizeHTML on the server and DOMPurify on the client side
 - Real time Registration Form Validation to enhance user experience, real Validation is done on the server side.
 - Checking if the username already exists within the MongoDB database prior to user registering -> using axios in the Registration to send async request to server; trip to the server
@@ -32,26 +48,62 @@ Full-Stack JavaScript application representing a GAA Club Team Chat App develope
 - JSON Webtokens
 - MVC Pattern
 - Publicly available request
-- CORS Request
+- CORS attack protection
 - Send email functionality through SendGrid API
+- Project developed in JavaScript Modules and bundled using babel & webpack
+- Project hosted on Heroku
+- .env secret credentials used
 
 # Live application
 
 To view the live application visit the following URL:
 
-- [https://the-great-irish-bucket-list.herokuapp.com/](https://the-great-irish-bucket-list.herokuapp.com/)
+- [https://club-manager-chat.herokuapp.com//](https://the-great-irish-bucket-list.herokuapp.com/)
 
 # Project Schema
 
 ```
 .
-├── public -> Client Public Side
-│   ├── browser.js -> Client-side JavaScript
-│   └── assets
-│     └── img
-│     └── css
-│       └── style.css
-├── server.js -> Server-side code in Node.js with an Express Back-end
+├── controllers
+│   ├── followController.js
+│   ├── postController.js
+│   └── userController.js
+├── frontend-js
+│   ├── modules
+│   |  ├── chat.js
+│   |  ├── registrationForm.js
+│   |  └── search.js
+│   └── main.js
+├── models
+│   ├── Follow.js
+│   ├── Post.js
+│   └── User.js
+├── public
+│   ├── main-bundled.js
+│   ├── styles.css
+│   └── images
+├── views
+│   ├── includes
+│   |  ├── flash.ejs
+│   |  ├── footer.ejs
+│   |  ├── header.ejs
+│   |  └── profileShared.ejs
+│   ├── 404.ejs
+│   └── create-post.ejs
+│   ├── edit-post.ejs
+│   ├── home-dashboard.ejs
+│   ├── home-guest.ejs
+│   ├── profile-followers.ejs
+│   ├── profile-following.ejs
+│   ├── profile.ejs
+│   └── single-post-screen.ejs
+├── .env
+├── app.js
+├── db.js
+├── router-api.js
+├── router.js
+├── package-lock.json
+├── package.json
 ```
 
 ## NPM Packages used within Club Manager
@@ -85,7 +137,7 @@ To view the live application visit the following URL:
 
 # Instructions for running the application locally in development
 
-To run the application for the first time, clone or download the repo and run the following commands:
+To run the application for the first time on a windows PC, clone or download the repo and run the following commands:
 
 - `npm install`
 - `npm run watch`
@@ -94,3 +146,9 @@ To run the application for the first time, clone or download the repo and run th
 
 - webpack (Webpack is an open-source JavaScript module bundler.)
 - nodemon (nodemon is a tool that helps develop node.js based applications by automatically restarting the node application when file changes in the directory are detected.)
+
+Running the project on Linux/MAC requires you to ammend the start command (npm run watch command) in the `package.json` file
+
+<p align="center">
+<img src="public/images/screencapture-club-manager-chat-herokuapp-2022-04-01-16_13_42.jpg"  height="auto" width="100%">
+</p>
