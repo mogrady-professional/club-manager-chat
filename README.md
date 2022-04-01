@@ -62,6 +62,7 @@ Project uses the [EJS templating engine](https://ejs.co/) to render views, with 
 - Send email functionality through SendGrid API
 - Project hosted on Heroku
 - .env secret credentials used
+- express-session used for session cookies -> expiry = 7 days
 
 # Live application
 
