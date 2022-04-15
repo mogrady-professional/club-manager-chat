@@ -34,7 +34,7 @@ Club Manager is a Full-Stack JavaScript application developed in MVC Pattern on 
 
 Project uses the [EJS templating engine](https://ejs.co/) to render views, with data stored on a Cluster the [MongoDB Cloud](https://cloud.mongodb.com/) accessable through the Atlas interface. Simple frontend UI based on a modern off-the-shelf Bootstrap Template.
 
-# Features — from a Developer Prospective
+# Features — from a Developer Perspective
 
 - Automatic App Restarts with Nodemon
 - Modular Javascript code compiled with babel and webpack for JS Bundling
@@ -68,7 +68,7 @@ Project uses the [EJS templating engine](https://ejs.co/) to render views, with 
 
 To view the live application visit the following URL:
 
-- [https://club-manager-chat.herokuapp.com//](https://the-great-irish-bucket-list.herokuapp.com/)
+- [https://club-manager-chat.herokuapp.com/](https://club-manager-chat.herokuapp.com/)
 
 # Project Schema
 
